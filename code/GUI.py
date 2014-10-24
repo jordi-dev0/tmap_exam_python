@@ -23,6 +23,6 @@ mButton = Button(mGui,text ='Ok', command = tekst,).grid(row=0,column=1)
 if sys.platform.startswith('win32'):
     mGui.mainloop()
 
-elif syst.platform.startswith('linux'):
+elif sys.platform.startswith('linux'):
     print (linux)
 
