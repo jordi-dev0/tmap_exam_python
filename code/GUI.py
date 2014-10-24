@@ -24,5 +24,5 @@ if sys.platform.startswith('win32'):
     mGui.mainloop()
 
 elif sys.platform.startswith('linux'):
-    print (linux)
+    mGui.mainloop()
 
