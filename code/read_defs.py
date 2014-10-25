@@ -5,16 +5,17 @@ def read_csv(str_in):# reads data from file and returns list
 	list_out = [];
 	from os import getcwd
 	from csv import reader
-#load data file name, if not provided load standard data file name
-	if str_in=="":
+	#load data file name, if not provided load standard data file name
+	if str_in=="":#if file name is empty string
 		data_file_name = "test_dat2.csv"; 
-	else:
+	else:# if file name is provided
 		data_file_name = str_in;
-# get path to data folder 
+	# get path to data folder 
 	current_dir = getcwd();
 	data_dir = current_dir[:len(current_dir)-4]
 	data_dir = data_dir+"data/"+data_file_name;
 	try:
+		# assuming the first row in the .csv file are the headings
 		row_counter = 0;
 		headings = [];
 		list_val = [];
@@ -28,7 +29,7 @@ def read_csv(str_in):# reads data from file and returns list
 					list_val.append(row)
 				row_counter +=1;
 		return [headings,list_val]
-	except IOError:
+	except IOError:# if reading .csv filed failed
 		print "ERROR READING FROM "+data_dir
 		print "PROBABLY A BAD FILE NAME, DUMMY!"
 		raise
