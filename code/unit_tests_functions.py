@@ -4,7 +4,7 @@ test_filename = "test_dat2.csv"
 # test read_defs.read_csv with test data
 print "test read_defs.read_csv with test data ...",
 try:
-	read_defs.read_csv("")
+	a= read_defs.read_csv("")
 	print "success"
 except:
 	print "failed"
