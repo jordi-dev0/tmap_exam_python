@@ -12,7 +12,7 @@ ment = StringVar()
 
 #modify root window
 mGui.title("Simple GUI")
-mGui.geometry("600x500+200+200")
+#mGui.geometry("600x500+200+200")
 
 mEntry = Entry(mGui,textvariable=ment).grid(row=0,column=0,sticky=W)
 
