@@ -1,7 +1,8 @@
 import os
-if sys.platform.startswith('win32')
+from sys import platform
+if platform.startswith('win32'):
 	clear_screen = lambda: os.system("cls");
-elif sys.platform.startswith('linux')
+elif platform.startswith('linux'):
 	clear_screen = lambda: os.system("clear");
 letter_list = ["a","b","c","d","e","f","g","h"]
 #functions
@@ -58,7 +59,7 @@ def match_def_to_word(f_name):
 			clear_screen()
 			print "Enter exit to quit"
 			print ""
-			print "Welk begrip hoort bij de volgede definitie: "
+			print "Welk begrip hoort bij de volgende definitie: "
 			print res[0]
 			print ""
 			for d in range(0,4):

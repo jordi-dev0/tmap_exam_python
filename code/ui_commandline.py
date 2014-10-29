@@ -1,8 +1,13 @@
 # kernel version of prcogramme
 #import modules
+from sys import platform
 import os
 import ask_questions_defs as ask
-clear_screen = lambda: os.system("clear");
+if platform.startswith("win32"):
+	clear_screen = lambda: os.system("cls");
+elif platform.startswith("linux"):
+	clear_screen = lambda: os.system("clear");
+
 #define constants
 menu_items = ["onderdeel 1.1","kwaliteitsattributen begrip  naar definitie","kwaliteitsattritbuten definitie naar begrip"]
 filename = "test_dat2.csv"
