@@ -1,5 +1,8 @@
 import os
-clear_screen = lambda: os.system("clear");
+if sys.platform.startswith('win32')
+	clear_screen = lambda: os.system("cls");
+elif sys.platform.startswith('linux')
+	clear_screen = lambda: os.system("clear");
 letter_list = ["a","b","c","d","e","f","g","h"]
 #functions
 def match_word_to_def(f_name):
