@@ -9,7 +9,7 @@ elif platform.startswith("linux"):
 	clear_screen = lambda: os.system("clear");
 
 #define constants
-menu_items = ["onderdeel 1.1","kwaliteitsattributen begrip  naar definitie","begrippen testtools","deelfasen faseringsmodel"]
+menu_items = ["onderdeel 1.1","kwaliteitsattributen begrip  naar definitie","begrippen testtools","deelfasen faseringsmodel","begrippen volgens tqc"]
 filename = "test_dat2.csv"
 letter_list = ["a","b","c","d","e","f","g","h"]
 		
@@ -32,6 +32,8 @@ while answer!="exit":
 		ask.match_word("test_tools.csv","random")
 	elif answer=="d":
 		ask.match_lists("deelfasen_lijst.csv","random")
+	elif answer=="e":
+		ask.match_word("begrippen_volgens_tqc.csv","random")
 print "Have a good day:)"
 			 
 			
