@@ -6,6 +6,21 @@ elif platform.startswith('linux'):
 	clear_screen = lambda: os.system("clear");
 letter_list = ["a","b","c","d","e","f","g","h"]
 #functions
+def match_word_gui(f_name,str_choice):
+	import read_defs as r
+	import gen_question_defs as q
+	from random import randint
+	if str_choice=="word":
+		res = q.gen_match_word(r.read_csv(f_name)[1])
+	elif str_choice=="def":
+		res = q.gen_match_def(r.read_csv(f_name)[1])
+	else:
+		if randint(0,1)==0:
+			res  =q.gen_match_word(r.read_csv(f_name)[1])
+		else:
+			res = q.gen_match_def(r.read_csv(f_name)[1])
+	return res
+
 def match_word_to_def(f_name):
 	import read_defs as r
 	import gen_question_defs as q

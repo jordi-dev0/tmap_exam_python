@@ -1,30 +1,34 @@
 #simple GUI
 import sys
 from Tkinter import *
-
+import ask_questions_defs as ask
 #create the window
+filename = "begrippen_volgens_tqc.csv"
 mGui = Tk()
 ment = StringVar()
 
 v = IntVar()
 v.set(1)
+res = ask.match_word_gui(filename,"random")
 answers = [
-    ("Python",1),
-    ("Perl",2),
-    ("Java",3),
-    ("C++",4),
-    ("C",5)
-    ]
+    ["Python",1],
+    ["Perl",2],
+    ["Java",3],
+    ["C++",4],
+     ]
+
+for ii in range(0,4):
+	answers[ii][0] = res[1][ii]
 
 def ShowChoice():
     print v.get()
 
 #modify root window
 mGui.title("Simple GUI")
-#mGui.geometry("600x500+200+200")
+#mGui.geometry("600x500")
 
 Label(mGui,
-      text="Choose your answer",
+      text=res[0],
       justify = LEFT,
       padx = 20).pack()
 
