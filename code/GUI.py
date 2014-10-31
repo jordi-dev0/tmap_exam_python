@@ -43,7 +43,3 @@ if sys.platform.startswith('win32'):
 
 elif sys.platform.startswith('linux'):
     mGui.mainloop()
-<<<<<<< HEAD
-=======
-
->>>>>>> eacb7de20a670b1b0779fdf8a39368c1a3667383
