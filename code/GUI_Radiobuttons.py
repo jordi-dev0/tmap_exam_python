@@ -1,6 +1,6 @@
 from Tkinter import *
 
-root = Tk()
+mGui = Tk()
 
 v = IntVar()
 v.set(1)  # initializing the choice, i.e. Python
@@ -16,14 +16,14 @@ languages = [
 def ShowChoice():
     print v.get()
 
-Label(root, 
+Label(mGui, 
       text="""Choose your favourite 
 programming language:""",
       justify = LEFT,
       padx = 20).pack()
 
 for txt, val in languages:
-    Radiobutton(root, 
+    Radiobutton(mGui, 
                 text=txt,
                 padx = 20, 
                 variable=v, 
