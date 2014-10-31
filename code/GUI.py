@@ -21,7 +21,7 @@ def ShowChoice():
 
 #modify root window
 mGui.title("Simple GUI")
-mGui.geometry("600x500+200+200")
+#mGui.geometry("600x500+200+200")
 
 Label(mGui,
       text="Choose your answer",
@@ -43,3 +43,7 @@ if sys.platform.startswith('win32'):
 
 elif sys.platform.startswith('linux'):
     mGui.mainloop()
+<<<<<<< HEAD
+=======
+
+>>>>>>> eacb7de20a670b1b0779fdf8a39368c1a3667383
