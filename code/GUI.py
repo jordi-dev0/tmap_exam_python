@@ -16,6 +16,7 @@ a1 = StringVar()
 a2 = StringVar()
 a3 = StringVar()
 a4  =StringVar()
+answer_int = IntVar()
 res = ask.match_word_gui(filename,"random")
 answers = [
     [a1,0],
@@ -26,9 +27,7 @@ answers = [
 
 for ii in range(0,4):
 	answers[ii][0].set(res[1][ii])
-
-
-	
+answer_int.set(res[2])
 
 #modify root window
 mGui.title("Simple GUI")
@@ -47,14 +46,10 @@ for txt, val in answers:
                  variable=v,
                  value=val,justify=LEFT).pack(anchor=W))
 
-def change_res(r):
-	res = r
-
-
 answer_box =Label(mGui,textvariable = answer,justify = LEFT, padx = 20).pack(anchor = E)
 def ShowChoice():
 	if b_text.get()=="Submit":
-		if v.get()==res[2]:
+		if v.get()==answer_int.get():
 			answer.set("Goed")
 		else:
 			answer.set("Fout")
@@ -66,7 +61,8 @@ def ShowChoice():
 		for ii in range(0,4):
 			answers[ii][0].set(res0[1][ii])
 		question_text.set(res0[0])
-		change_res(res0)
+		answer_int.set(res0[2])
+		
  
 mButton = Button(mGui,textvariable =b_text, command=ShowChoice).pack()
 #kick off the event loop
