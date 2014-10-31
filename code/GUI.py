@@ -27,17 +27,19 @@ def ShowChoice():
 mGui.title("Simple GUI")
 #mGui.geometry("600x500")
 
-Label(mGui,
-      text=res[0],
+question_box = Label(mGui,
+      text = res[0],wraplength=500,
       justify = LEFT,
-      padx = 20).pack()
-
+      padx = 20).pack(anchor=W)
+rb = []
 for txt, val in answers:
-    Radiobutton (mGui,
-                 text=txt,
+	rb.append(Radiobutton (mGui,
+                 text=txt,wraplength=500,
                  padx = 20,
                  variable=v,
-                 value=val).pack(anchor=W)
+                 value=val).pack(anchor=W))
+
+
 
 mButton = Button(mGui,text ='Submit', command=ShowChoice).pack()
 
