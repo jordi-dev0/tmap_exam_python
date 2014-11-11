@@ -31,7 +31,7 @@ answer_int.set(res[2])
 
 #modify root window
 mGui.title("Simple GUI")
-#mGui.geometry("600x500")
+mGui.geometry("500x300")
 
 question_box = Label(mGui,
       textvariable =question_text ,wraplength=500,
